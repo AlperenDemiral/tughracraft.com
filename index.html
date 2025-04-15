@@ -1,121 +1,135 @@
-<index.html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TughraCraft - Resmi Sunucu</title>
+  <title>TughraCraft | Krallığını Kur, Gücünü Göster</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #0c0c1f, #1a1a2e);
+      background: #0e0e1a;
       color: white;
-      text-align: center;
     }
     header {
-      padding: 30px 0;
+      background: #111;
+      padding: 20px;
+      text-align: center;
     }
-    header img {
-      max-width: 300px;
+    nav {
+      background: #1a1a2e;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 0;
     }
-    h1 {
+    nav a {
+      color: gold;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('slider.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0 0 10px #000;
+    }
+    .hero h1 {
       font-size: 48px;
       color: gold;
-      margin-bottom: 10px;
     }
-    p.subtitle {
-      color: #ccc;
-      margin-top: 0;
-      font-size: 18px;
+    .hero p {
+      font-size: 20px;
+      color: #eee;
     }
-    .button {
-      display: inline-block;
-      margin: 20px 10px;
-      padding: 15px 30px;
+    .hero a {
       background: gold;
       color: black;
+      padding: 12px 25px;
+      text-decoration: none;
       font-weight: bold;
       border-radius: 10px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .button:hover {
-      background: #ffd700;
-    }
-    .countdown {
-      font-size: 32px;
-      margin-top: 30px;
-      color: #ffcc00;
-    }
-    .form-section {
-      margin-top: 50px;
-    }
-    input[type="text"], input[type="email"] {
-      padding: 10px;
-      width: 250px;
-      margin: 10px;
-      border-radius: 5px;
-      border: none;
-    }
-    .form-button {
-      padding: 10px 25px;
-      background-color: gold;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 5px;
       margin-top: 10px;
     }
-    footer {
-      margin-top: 60px;
+    .mods {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 10px;
+      background: #14142b;
+    }
+    .mod-box {
+      background: #1f1f3b;
+      margin: 10px;
       padding: 20px;
+      width: 200px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .mod-box h3 {
+      color: gold;
+    }
+    .countdown {
       background: #111;
+      padding: 30px;
+      text-align: center;
+      font-size: 24px;
+      color: #ffcc00;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
       font-size: 14px;
-      color: #aaa;
+      color: #888;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="TughraCraftLogo.png" alt="TughraCraft Logo">
-    <h1>TughraCraft</h1>
-    <p class="subtitle">PvP • Skyblock • RP • Faction • Survival</p>
+    <img src="logo.png" alt="TughraCraft Logo" height="80">
   </header>
-  <main>
-    <a href="https://discord.gg/6JXZRtjV" class="button">Discord'a Katıl</a>
-    <a href="#" class="button">Sunucu IP: play.tughracraft.com</a>
-    <a href="#" class="button">Oy Ver</a>
-
-    <div class="countdown">
-      Sunucu açılışına kalan süre: <span id="timer">Yükleniyor...</span>
-    </div>
-
-    <div class="form-section">
-      <h2>Güncellemelerden haberdar olun</h2>
-      <input type="text" placeholder="Adınız">
-      <input type="email" placeholder="E-posta adresiniz">
-      <br>
-      <button class="form-button">Kaydol</button>
-    </div>
-  </main>
+  <nav>
+    <a href="#">Anasayfa</a>
+    <a href="#">Oyun Modları</a>
+    <a href="#">VIP</a>
+    <a href="#">Topluluk</a>
+    <a href="#">Kurallar</a>
+    <a href="#">İletişim</a>
+    <a href="https://discord.gg/6JXZRtjV" style="color: lightgreen;">Discord</a>
+  </nav>
+  <section class="hero">
+    <h1>Krallığını Kur, Gücünü Göster!</h1>
+    <p>TughraCraft şimdi daha güçlü...</p>
+    <a href="#">play.tughracraft.com</a>
+  </section>
+  <section class="mods">
+    <div class="mod-box"><h3>PvP</h3><p>Arena savaşları seni bekliyor</p></div>
+    <div class="mod-box"><h3>Skyblock</h3><p>Adanı geliştir, hükmet</p></div>
+    <div class="mod-box"><h3>Survival</h3><p>Kaynak topla, hayatta kal</p></div>
+    <div class="mod-box"><h3>Faction</h3><p>Krallığını kur, toprak savun</p></div>
+    <div class="mod-box"><h3>RP</h3><p>Karakterini yarat, yaşat</p></div>
+  </section>
+  <section class="countdown">
+    Açılışa kalan süre: <span id="timer">Yükleniyor...</span>
+  </section>
   <footer>
-    © 2025 TughraCraft. Tüm Hakları Saklıdır.
+    © 2025 TughraCraft. Tüm hakları saklıdır.
   </footer>
-
   <script>
     const countdown = () => {
-      const launchDate = new Date("2025-05-01T20:00:00").getTime();
+      const launch = new Date("2025-05-01T20:00:00").getTime();
       const now = new Date().getTime();
-      const distance = launchDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("timer").innerText = `${days}g ${hours}s ${minutes}d ${seconds}s`;
+      const diff = launch - now;
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((diff % (1000 * 60)) / 1000);
+      document.getElementById("timer").innerText = `${d}g ${h}s ${m}d ${s}s`;
     };
-
     setInterval(countdown, 1000);
   </script>
 </body>
