@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TughraCraft - Resmi Sunucu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #0c0c1f, #1a1a2e);
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 30px 0;
+    }
+    header img {
+      max-width: 300px;
+    }
+    h1 {
+      font-size: 48px;
+      color: gold;
+      margin-bottom: 10px;
+    }
+    p.subtitle {
+      color: #ccc;
+      margin-top: 0;
+      font-size: 18px;
+    }
+    .button {
+      display: inline-block;
+      margin: 20px 10px;
+      padding: 15px 30px;
+      background: gold;
+      color: black;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background: #ffd700;
+    }
+    .countdown {
+      font-size: 32px;
+      margin-top: 30px;
+      color: #ffcc00;
+    }
+    .form-section {
+      margin-top: 50px;
+    }
+    input[type="text"], input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      margin: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    .form-button {
+      padding: 10px 25px;
+      background-color: gold;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background: #111;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="TughraCraftLogo.png" alt="TughraCraft Logo">
+    <h1>TughraCraft</h1>
+    <p class="subtitle">PvP • Skyblock • RP • Faction • Survival</p>
+  </header>
+  <main>
+    <a href="https://discord.gg/6JXZRtjV" class="button">Discord'a Katıl</a>
+    <a href="#" class="button">Sunucu IP: play.tughracraft.com</a>
+    <a href="#" class="button">Oy Ver</a>
+
+    <div class="countdown">
+      Sunucu açılışına kalan süre: <span id="timer">Yükleniyor...</span>
+    </div>
+
+    <div class="form-section">
+      <h2>Güncellemelerden haberdar olun</h2>
+      <input type="text" placeholder="Adınız">
+      <input type="email" placeholder="E-posta adresiniz">
+      <br>
+      <button class="form-button">Kaydol</button>
+    </div>
+  </main>
+  <footer>
+    © 2025 TughraCraft. Tüm Hakları Saklıdır.
+  </footer>
+
+  <script>
+    const countdown = () => {
+      const launchDate = new Date("2025-05-01T20:00:00").getTime();
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerText = `${days}g ${hours}s ${minutes}d ${seconds}s`;
+    };
+
+    setInterval(countdown, 1000);
+  </script>
+</body>
+</html>
