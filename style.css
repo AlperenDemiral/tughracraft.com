@@ -1,0 +1,79 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f1c;
+  color: white;
+}
+header {
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+header img {
+  height: 60px;
+}
+nav a {
+  color: gold;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+main {
+  padding: 30px;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  font-size: 14px;
+  color: #888;
+}
+.hero {
+  background: url('banner.jpg') no-repeat center center/cover;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero h1 {
+  font-size: 48px;
+  color: gold;
+}
+.hero p {
+  font-size: 20px;
+  color: #ccc;
+}
+.cta-button {
+  background: gold;
+  color: black;
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.market-item {
+  background: #1c1c30;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  width: 260px;
+  text-align: center;
+  display: inline-block;
+}
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+}
+.price {
+  font-size: 20px;
+  color: #00ffae;
+}
+.buy-btn {
+  background: gold;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
